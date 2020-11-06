@@ -1,0 +1,200 @@
+.footer{
+  background: #152F4F;
+  color:white;
+  
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }  
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  } 
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+.colorJomb{
+	/*color: #204879;*/
+	color: #152F4F;
+}
+
+.btn_color{
+	background: #1b3c65;
+	color: white;
+}
+
+.btn_color1{
+	background: #204879;
+	color: white;
+}
+.btn_color1:hover{
+	color: #aec9ea;
+}
+
+#custInfo{
+	color: #aec9ea;
+}
+
+.btn_color:hover{
+	color: #aec9ea;
+}
+
+.jumbotron{
+	background: #c3d7ef;
+}
+
+	/* Card */
+.package-card {
+    background-color: #ffffff;
+    transition: background-color 300ms, box-shadow 300ms;
+	text-align: center;
+	height: 150px;
+	background: #eaf1fa;
+}
+
+.package-card:hover {
+    background-color: #d6e4f5;
+    -webkit-box-shadow: 5px 5px 31px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 31px -1px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 31px -1px rgba(0,0,0,0.75);
+}
+
+.package-card a {
+    text-decoration:none;
+}
+	/* Card end */
+/********************************************************/
+* { box-sizing: border-box; }
+body {
+  font: 16px Arial;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+/*****************************************/
+
+#lineCard{
+	display:none;
+}
+#lineCard1{
+	display:none;
+}
+#lineCard2{
+	display:none;
+}
+#title{
+	display:none;
+	color: #204879;
+	font-weight: bold;
+}
+#title1{
+	display:none;
+	color: #204879;
+	font-weight: bold;
+}
+#span1{
+	color:black;
+	font-weight:normal;
+}
+#firstDate{
+	display:none;
+}
+#secondDate{
+	display:none;
+}
+#content{
+	display:none;
+}
+#content1{
+	display:none;
+}
+
+#imageId{
+	opacity: 0.1;
+}
+
+#boldText{
+	font-weight: bold;
+}
+
+#labelTetx{
+	font-weight: normal;
+	font-size: 80%;
+	font-size: 80%;
+}
+
+#jumbShow{
+	display:none;
+}
+
+#btnPay{
+	display:none;
+}
+
+#paymentJump{
+	display:none;
+}
+
+#paymentDiv{
+	display:none;
+}
+
+#showMainBtn{
+	display:none;
+}

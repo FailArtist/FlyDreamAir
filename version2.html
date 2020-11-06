@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>FlyDreamAir</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body id="bodyId" class="bg-muted">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="FlyDreamAir1.png" width="64" height="30" class="d-inline-block align-top" alt=""></a>
+  <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About us<span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="#">Sales<span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="#">Office Locations<span class="sr-only">(current)</span></a>
+      </li>
+	  <!--<li class="nav-item active">
+        <a class="nav-link" data-toggle="modal" data-target="#staticBackdrop2" onclick="custInfoFunc()" id="custInfo"  class="btn btn-outline-success my-2 my-sm-0" type="button"></a>
+      </li>-->
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+	  <li class="nav-item active">
+        <a class="nav-link"  onclick="custInfoFunc()" id="custInfo"  class="btn btn-outline-success my-2 my-sm-0" type="button"></a>
+      </li>
+    </form>
+  </div>
+</nav>
+
+<br>
+
+<div class="container">
+	<div id="carouselExampleFade" class="carousel slide carousel-fade" >
+    <ol class="carousel-indicators">
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+        </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+           <img class="d-block w-100 rounded mx-auto" src="kangaroo33.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Australia - the Kangaroo place
+                    <a class="btn btn-default bg-light" href="https://www.australia.com/en">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+			<img class="d-block w-100 rounded mx-auto" src="melbourne1.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Melbourne - the cultural capital of Australia
+                    <a class="btn btn-default bg-light" href="http://www.melbourne.vic.gov.au/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 rounded mx-auto" src="goldCoast3.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Gold Coast - the surfers paradise
+                    <a class="btn btn-default bg-light" href="http://www.goldcoast.qld.gov.au/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 rounded mx-auto" src="uluru2.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Uluru - the world's second largest monolith
+                    <a class="btn btn-default bg-light" href="http://uluru-australia.com/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 rounded mx-auto" src="sydney.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Sydney - the biggest Australian city
+                    <a class="btn btn-default bg-light" href="https://www.sydney.com/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 rounded mx-auto" src="perth1.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Perth - the capital of Western Australia
+                    <a class="btn btn-default bg-light" href="https://www.perth.wa.gov.au/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 rounded mx-auto" src="croc45.jpg" alt="">
+            <div class="carousel-caption" role="option">
+                <p>
+                    Darwin - the capital of Northern Territory
+                    <a class="btn btn-default bg-light" href="https://www.darwin.nt.gov.au/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+	
+  <div class="text-center">
+    <a href="#"><img class="d-block mx-auto" src="FlyDreamAir.png" alt="" width="" height=""></a>
+    <!--<h2 class="text-success">Fly Dream Airlines</h2>
+    <p class="lead">Some company information.....</p>-->
+  </div>
+
+<div class="jumbotron">
+  <h1 class="display-5 text-center colorJomb">Fly Dream Airlines</h1>
+  <p class="lead text-center">Explore Australia with FlyDreamAir. The country of the year! <b style="color:maroon;">Huge sales for this destination!</b></p>
+</div>
+ 
+ <div id="updateDiv">
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+      <h4 class="mb-3"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-briefcase-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
+		<path fill-rule="evenodd" d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v1.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 5.884V4.5zm5-2A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z"/>
+		</svg> Book a flight</h4>
+      <!--<form class="needs-validation" novalidate="">-->
+	  <hr class="mb-4">
+        <div class="row">
+          <div class="col-md-6 mb-3 autocomplete">
+			<img src="plane.png" alt="" width="22" height="22">
+            <label for="depart">From</label>
+            <input type="text" class="form-control" id="depart" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid depart name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 autocomplete">
+			<img src="plane1.png" alt="" width="22" height="22">
+            <label for="arrive">Destination</label>
+            <input type="text" class="form-control" id="arrive" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid arrive name is required.
+            </div>
+          </div>
+        </div>
+
+        <hr class="mb-4">
+		
+	<div class="row">
+		<div class="col-md-3 mb-3">
+			<h5 class="mb-3">Return type</h5>
+			<div class="d-block my-3">
+				<div class="custom-control custom-radio">
+					<input id="single" name="flight" type="radio" class="custom-control-input" required="" onclick="javascript:yesnoCheck();">
+					<label class="custom-control-label" for="single">One way</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input id="return" name="flight" type="radio" class="custom-control-input" required="" onclick="javascript:yesnoCheck();">
+					<label class="custom-control-label" for="return">Return</label>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 mb-3">
+			<div class="firstDate" id="firstDate" onclick="yesnoCheck();">
+				<img src="notepad1.png" alt="" width="25" height="25">
+				<label for="singleDate">When?</label>
+				<input type="text" class="form-control" name="singleDate" value="" />
+			</div>
+			<div class="secondDate" id="secondDate" onclick="yesnoCheck();">
+				<img src="notepad.png" alt="" width="25" height="25">
+				<label for="datefilter">When?</label>
+				<input type="text" class="form-control" name="datefilter" value="" />
+			</div>
+		</div>
+		
+		<div id="showMainBtn" class="col-md-3 mb-3"> 	
+			<!-- BUTTON -->
+				<label for="singleDate"></label>
+				<button class="btn btn_color btn-lg btn-block" onclick="validateName()" type="submit">Check flights</button>
+			<!-- BUTTON -->
+			<div  class="col-md-12 mb-3">
+				<label></label>
+				<p id="show"></p>
+			</div>
+		</div>
+		
+	</div>
+		<hr class="mb-4">
+		
+		<!--<div class="row">
+			<div class="col-md-3 mb-3"> 	
+				<button class="btn btn_color btn-lg btn-block" onclick="validateName()" type="submit">Check flights</button>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12 mb-3">
+				<p id="show"></p>
+			</div>
+		</div>-->
+<!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD -->
+		<h5 id="title" class="mb-3"></h5>
+			<hr id="lineCard" class='mb-12'>
+		<div class="row" id="content"></div>
+		<h5 id="title1" class="mb-3"></h5>
+			<hr id="lineCard1" class='mb-12'><br />	
+		<div class="row" id="content1"></div>
+			<hr id="lineCard2" class='mb-12'>
+<!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD --><!-- CARD -->
+<!--</form>-->
+			
+			<div id="card"></div>
+			
+			
+			<div id="jumbShow" class="jumbotron">
+				<div class="row">
+				  <div class="col-md-6 mb-3" id="showInfo">
+						<p id="flightDetail" class="lead"></p>
+						<hr class="my-2">
+						<!--<h5 id="one" class="colorJomb"></h5>
+						<p id="two" class="lead"></p>
+						<small>*exclude meal, luggage and entertainment.</small>
+						<br><br>-->
+				  </div>
+				  
+				  <div class="col-md-3 mb-3" >
+						<label for="meal">Meal:</label>
+						<select class="custom-select d-block w-100" id="meal" required="">
+							<option value="">Choose...</option>
+							<option>Chicken - AUD $15</option>
+							<option>Beef - AUD $18</option>
+							<option>Fish - AUD $20</option>
+							<option>None</option>
+						</select>
+					</div>
+							<br> <!--<hr class="my-2">-->
+				<div class="col-md-3 mb-3" >			
+						<label for="luggage">Luggage:</label>
+						<select class="custom-select d-block w-100" id="luggage" required="">
+							<option value="">Choose...</option>
+							<option>20kg - AUD $80</option>
+							<option>15kg - AUD $60</option>
+							<option>10kg - AUD $40</option>
+							<option>None</option>
+						</select>
+				</div>
+				</div>
+				<div class="row">
+				 <div class="col-md-6 mb-3" id="showInfo">
+						<!--<p class="lead">Flight Details:</p>
+						<hr class="my-2">-->
+						<h5 id="one"></h5>
+						<p id="two" class="lead"><p></p>
+						<small>*price excludes meal, luggage and entertainment.</small>
+						</p>
+						<br><!--<br><br>-->
+				  </div>
+					<br>
+				<div class="col-md-3 mb-3" >			
+						<label for="entertainment">Entertainment:</label>
+						<select class="custom-select d-block w-100" id="entertainment" required="">
+							<option value="">Choose...</option>
+							<option>Tablet set - AUD $20</option>
+							<option>Movies - AUD $15</option>
+							<option>Other - AUD $10</option>
+							<option>None</option>
+						</select>
+				</div>
+				
+				<div class="col-md-3 mb-3" >			
+						<label for="entertainment">Seat:</label>
+						<select class="custom-select d-block w-100" id="seat" required="">
+							<option value="">Choose...</option>
+							<option>16-D</option>
+							<option>17-C</option>
+							<option>18-A</option>
+							<option>18-C</option>
+							<option>19-A</option>
+							<option>20-E</option>
+							<option>21-A</option>
+							<option>21-B</option>
+							<option>21-C</option>
+							<option>28-B</option>
+							<option>40-C</option>
+							<option>40-D</option>
+							<option>40-E</option>
+							<option>41-A</option>
+							<option>45-B</option>
+							<option>50-D</option>
+						</select>
+				</div>
+									
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-6">
+						<h3 id="displayTicket" class="colorJomb"></h3>
+						<!--<small id="displayInfo"></small>-->
+						<p id="displayInfo"></p>
+					</div>
+					
+					<div id="btnPay" class="col-md-3">
+						<button onclick="paymentClick()" class="btn btn_color1 btn-sm-1 btn-block" type="submit">Payment</button>
+					</div>
+					
+					<div class="col-md-3">
+						<button onclick="clickCalculateBook()" class="btn btn_color btn-sm-1 btn-block" type="submit">Calculate</button>
+					</div>
+					
+				</div>
+			</div>
+	
+	<div id="paymentDiv">
+	<div class="row">
+		<div class="col-md-12 order-md-1">
+				<div class="row">
+					<div id="contPayment"  class="col-md-6 order-md-1 jumbotron">
+						<h4 class="mb-3">Personal details</h4>
+						<!--<form class="needs-validation" novalidate="">-->
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="firstName">First name</label>
+								<input type="text" class="form-control" id="firstName" placeholder="John" value="" required="">
+								<div class="invalid-feedback">Valid first name is required.</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="lastName">Last name</label>
+								<input type="text" class="form-control" id="lastName" placeholder="Smith" value="" required="">
+								<div class="invalid-feedback">Valid last name is required.</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="mb-3">
+									<label for="username">Date of birth</label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+										<span class="input-group-text">@</span>
+										</div>
+										<input type="text" class="form-control" id="dob" placeholder="dd-mm-yyyy" required="">
+										<div class="invalid-feedback" style="width: 100%;">Your date of birth is required.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">	
+								<div class="mb-3">
+									<label for="username">Username<span class="text-muted"> (Optional)</span></label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+										<span class="input-group-text">@</span>
+										</div>
+										<input type="text" class="form-control" id="username" placeholder="" required="">
+										<div class="invalid-feedback" style="width: 100%;">Your username is required.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mb-3">
+						  <label for="email">Email</label>
+						  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+						  <div class="invalid-feedback">Please enter a valid email addres.</div>
+						</div>
+						<div class="mb-3">
+						  <label for="email">Email confirmation</label>
+						  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+						  <div class="invalid-feedback">Please enter a valid email addres.</div>
+						</div>
+
+						<hr class="mb-4">
+								
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="save-info">
+									<label class="custom-control-label" for="save-info">Save information for next time</label>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<button type="button" onclick="clickPayment()" class="btn btn_color btn-sm-1 btn-block" >Continue payment</button>
+							</div>
+						</div>
+						
+						<div class="mb-3">
+						  <div id="test"></div> 
+						</div>
+					</div>
+					
+
+					<div id="paymentJump" class="col-md-6 order-md-1 jumbotron">
+							<h4 class="mb-3">Payment</h4>
+
+							<div class="d-block my-3">
+							  <div class="custom-control custom-radio">
+								<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+								<label class="custom-control-label" for="credit">Credit card</label>
+							  </div>
+							  <div class="custom-control custom-radio">
+								<input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+								<label class="custom-control-label" for="debit">Debit card</label>
+							  </div>
+							  <div class="custom-control custom-radio">
+								<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+								<label class="custom-control-label" for="paypal">PayPal</label>
+							  </div>
+							</div>
+							
+							<div class="row">
+							  <div class="col-md-6 mb-3">
+								<label for="cc-name">Name on card</label>
+								<input type="text" class="form-control" id="cc-name" placeholder="" required="">
+								<small class="text-muted">Full name as displayed on card</small>
+								<div class="invalid-feedback">Name on card is required</div>
+							  </div>
+							  <div class="col-md-6 mb-3">
+								<label for="cc-number">Credit card number</label>
+								<input type="text" class="form-control" id="cc-number" placeholder="" required="">
+								<div class="invalid-feedback">Credit card number is required</div>
+							  </div>
+							</div>
+							<div class="row">
+							  <div class="col-md-3 mb-3">
+								<label for="cc-expiration">Expiration</label>
+								<input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+								<div class="invalid-feedback">Expiration date required</div>
+							  </div>
+							  <div class="col-md-3 mb-3">
+								<label for="cc-cvv">CVV</label>
+								<input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+								<div class="invalid-feedback">Security code required</div>
+							  </div>
+							</div>
+							<hr class="mb-4">
+							<button id="payButton" onclick="payBtnCalc()" class="btn btn_color btn-sm-1 btn-block" type="button">Pay</button>
+						  <!--</form>-->
+					</div>
+				</div>
+		</div>
+	</div>
+	</div>
+	
+	<div id="card1"></div>
+	<div id="pay"></div> 
+	<div id="showCust"></div>
+	<div id="showCustChange"></div>
+	
+  </div>	
+  </div>
+  </div>
+ 
+</div>
+		<!-- FOOTER -->
+	  <div class="mt-5 pt-5 pb-5 footer">
+	 <div class="container">
+	  <div class="row">
+		<div class="col-lg-5 col-xs-12 about-company">
+		  <h2>FlyDreamAir</h2>
+		  <p class="pr-5 text-white-50">Explore Australia with Fly Dream Airlines</p>
+		  <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
+		</div>
+		<div class="col-lg-3 col-xs-12 links">
+		  <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+			<ul class="m-0 p-0">
+			  <li>- <a href="#">About us</a></li>
+			  <li>- <a href="#">Office Locations</a></li>
+			  <li>- <a href="#">Sales</a></li>
+			  <!--<li>- <a href="#">Some Page 4</a></li>-->
+			</ul>
+		</div>
+		<div class="col-lg-4 col-xs-12 location">
+		  <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+		  <p>Sydney NSW 2020 Australia</p>
+		  <p class="mb-0"><i class="fa fa-phone mr-3"></i>(777) 777-7777</p>
+		  <p><i class="fa fa-envelope-o mr-3"></i>flydreamair@flydreamair.com</p>
+		</div>
+	  </div>
+	  <div class="row mt-1">
+		<div class="col copyright">
+		  <a href="#"><img class="d-block mx-auto" src="FlyDreamAir.png" alt="" width="100" height="100"></a>
+		  <!--<small class="d-block text-white-50">2020 © FlyDreamAir</small>-->
+		</div>
+	  </div>
+	<div class="container">
+		<div class="carousel slide" >
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="row">
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="kangaroo00.jpg" alt="1 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="sydney2.jpg" alt="2 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="kangaroo66.jpg" alt="3 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="frazer.jpg" alt="4 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="12 Apostles1.jpg" alt="5 slide"></div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="row">
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="sydneyBridge.jpg" alt="6 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="kangaroo44.jpg" alt="7 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="melbourne1.jpg" alt="8 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="signs1.jpg" alt="9 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="darwin.jpg" alt="10 slide"></div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="row">
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="brisbane1.jpg" alt="11 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="signs1.jpg" alt="12 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="croc45.jpg" alt="13 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="goldCoast3.jpg" alt="14 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="kangaroo22.jpg" alt="15 slide"></div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="row">
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="kangaroo33.jpg" alt="11 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="sydney.jpg" alt="12 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="perth1.jpg" alt="13 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="goldCoast2.jpg" alt="14 slide"></div>
+						<div class="col"><img class="d-block w-100 img-fluid rounded mx-auto" src="brisbane.jpg" alt="15 slide"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+</body>
+</html>
